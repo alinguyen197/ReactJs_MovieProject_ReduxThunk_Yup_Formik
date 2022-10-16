@@ -1,0 +1,498 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 15px #0000004d;
+}
+
+.banTayDietQuy {
+  background-image: url("../asset/image/banTayDietQuy.png");
+  height: 800px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+
+.trangTi {
+  background-image: url("../asset/image/trangTi.png");
+  height: 800px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+
+.latMat {
+  background-image: url("../asset/image/latMat.png");
+  height: 800px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+
+.round img {
+  height: 70px;
+  width: 70px;
+  opacity: 2;
+  transform: translate(1050%, -550%);
+}
+
+.slick-arrow.slick-next {
+  right: 0;
+  left: 93%;
+  height: 100px;
+  width: 100px;
+  z-index: 1;
+}
+
+.slick-arrow.slick-prev {
+  right: 5%;
+  left: 0;
+  height: 100px;
+  width: 100px;
+  z-index: 1;
+}
+
+.slick-slider.carousel.slick-initialized .slick-next:before,
+.slick-slider.carousel.slick-initialized .slick-prev:before {
+  font-size: 100px;
+}
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.positionHomeTool {
+  position: absolute;
+  transform: translate(20%, -130%);
+}
+
+.homeTool .container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 70px;
+  top: 50%;
+  justify-content: center;
+  z-index: 1;
+  border: 5px solid #837c7c33;
+  padding: 25px;
+  border-radius: 2%;
+  box-shadow: 5px;
+  background-color: white;
+}
+
+.homeTool .container button {
+  color: black;
+  font-size: 25px;
+}
+
+.HomeMovie {
+  padding-top: 10%;
+}
+
+.HomeMovie .slick-arrow.slick-prev {
+  right: 0;
+  left: -9%;
+  height: 100px;
+  width: 100px;
+  z-index: 1;
+}
+
+.HomeMovie .slick-arrow.slick-next {
+  right: 0;
+  left: 102%;
+  height: 100px;
+  width: 100px;
+  z-index: 1;
+}
+
+.HomeMovie .slick-slider.slick-initialized .slick-next:before,
+.HomeMovie .slick-slider.slick-initialized .slick-prev:before {
+  font-size: 100px;
+  color: #a69f9f6e;
+}
+
+.tableBlock.MuiTableBody-root {
+  display: grid;
+  grid-template-columns: 100px 600px auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 500px;
+  border: 1px solid #7a7c833b;
+}
+
+.table {
+  border: 1px solid #7a7c833b;
+}
+
+.forImage-0 {
+  background-image: url("../asset/image/bhd-0.png");
+  height: 50px;
+  width: 50px;
+  background-repeat: no-repeat;
+  margin-right: 1rem;
+}
+
+.forImage-1 {
+  background-image: url("../asset/image/bhd-1.png");
+  height: 50px;
+  width: 50px;
+  background-repeat: no-repeat;
+  margin-right: 1rem;
+}
+
+.forImage-2 {
+  background-image: url("../asset/image/bhd-2.png");
+  height: 50px;
+  width: 50px;
+  background-repeat: no-repeat;
+  margin-right: 1rem;
+}
+
+.forImage-3 {
+  background-image: url("../asset/image/bhd-3.png");
+  height: 50px;
+  width: 50px;
+  background-repeat: no-repeat;
+  margin-right: 1rem;
+}
+
+.forImage-4 {
+  background-image: url("../asset/image/bhd-4.png");
+  height: 50px;
+  width: 50px;
+  background-repeat: no-repeat;
+  margin-right: 1rem;
+}
+
+.forImage-5 {
+  background-image: url("../asset/image/bhd-5.png");
+  height: 50px;
+  width: 50px;
+  background-repeat: no-repeat;
+  margin-right: 1rem;
+}
+
+.handleCumRap {
+  margin: 1rem;
+}
+
+.MuiTableCell-root.MuiTableCell-body .row img {
+  margin: 0 10px 10px 10px;
+}
+
+.MuiTableCell-root.MuiTableCell-body .row h5 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 10px;
+}
+
+.aboutGrid1 {
+  display: grid;
+  gap: 5px;
+  flex-wrap: wrap-reverse;
+  grid-template-columns: auto auto;
+}
+
+.aboutGrid2 {
+  display: grid;
+  gap: 5px;
+  flex-wrap: wrap-reverse;
+  grid-template-columns: auto auto auto;
+}
+
+.MuiCardMedia-img {
+  height: 300px;
+}
+
+.MuiTabs-flexContainer {
+  justify-content: center;
+}
+
+.MuiTabPanel-root .MuiGrid-container {
+  flex-wrap: nowrap;
+}
+
+.MuiGrid-root.MuiGrid-grid-lg-1, .imageChild {
+  margin-right: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.imageChild {
+  height: 120px;
+  width: 120px;
+}
+
+.backgroundImage {
+  width: 100%;
+  height: 800px;
+  position: relative;
+  background-image: url(../asset/image/backapp.jpg);
+  opacity: 1;
+}
+
+.textApp {
+  color: white;
+  font-size: large;
+  padding-top: 50px;
+}
+
+.textApp h1,
+.textApp h4,
+.textApp p {
+  margin: 5px;
+  padding-bottom: 5px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 150px;
+  justify-items: center;
+  position: absolute;
+  top: 100px;
+}
+
+.imgApp {
+  width: 300px;
+  height: 600px;
+  position: absolute;
+  border: 5px solid #dfc8c847;
+  border-radius: 10%;
+  overflow: hidden;
+}
+
+.cardApp .slick-slider.slick-initialized .slick-arrow.slick-prev:before {
+  display: none;
+}
+
+.backgroundColor {
+  height: 400px;
+  width: 100%;
+  background-color: #080707f0;
+  color: #817b7b;
+}
+
+.const, .item, .itemChild {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+
+.item {
+  gap: 100px;
+  padding-top: 30px;
+}
+
+.itemChild {
+  gap: 2px;
+}
+
+.itemChild img {
+  height: 30px;
+  width: 30px;
+  padding: 2px;
+}
+
+.itemChi img {
+  height: 30px;
+  width: 30px;
+  padding: 2px;
+}
+
+.infoitem {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-top: 10px;
+  gap: 10px;
+}
+
+.infoitem img {
+  height: 70px;
+  width: 150px;
+}
+
+@media screen and (max-width: 1200px) {
+  .slick-slider.carousel.slick-initialized .slick-next:before {
+    font-size: 75px;
+    margin-left: -2rem;
+  }
+  .slick-slider.carousel.slick-initialized .slick-prev:before {
+    font-size: 75px;
+    margin: 2rem;
+  }
+  .homeTool .container {
+    padding: 1rem;
+  }
+  .homeTool .container button {
+    font-size: 20px;
+  }
+  .HomeMovie .slick-arrow.slick-prev:before,
+  .HomeMovie .slick-arrow.slick-next:before {
+    display: none;
+  }
+  .HomeMovie .MuiTypography-root.MuiTypography-h5.MuiTypography-gutterBottom,
+  .HomeMovie .aboutGrid2 h5 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .tableBlock.MuiTableBody-root {
+    grid-template-columns: 100px 300px auto;
+  }
+  .aboutGrid1 h3 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .aboutGrid2 {
+    grid-template-columns: auto auto 300px;
+  }
+  .aboutGrid2 h3 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .backgroundImage {
+    height: 1000px;
+  }
+  .grid {
+    grid-template-columns: auto;
+  }
+  .grid .textApp {
+    transform: translate(50%, -30%);
+  }
+  .grid .imgApp {
+    transform: translate(50%, -35%);
+  }
+  .backgroundColor h3,
+  .backgroundColor h5 {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0.5rem;
+  }
+  .backgroundColor .textInfo {
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .slick-slider.carousel.slick-initialized .slick-next:before,
+  .slick-slider.carousel.slick-initialized .slick-prev:before {
+    font-size: 50px;
+  }
+  .homeTool .container {
+    gap: 30px;
+    padding: 10px;
+  }
+  .homeTool .container button {
+    font-size: 15px;
+  }
+  .aboutGrid1,
+  .aboutGrid2 {
+    grid-template-columns: auto;
+  }
+  .grid .textApp,
+  .grid .imgApp {
+    transform: translate(20%, -30%);
+  }
+  .hideText {
+    display: none;
+  }
+  .item {
+    justify-content: center;
+    grid-template-columns: auto;
+    height: 100px;
+  }
+  .item .oneLine {
+    display: flex;
+    white-space: nowrap;
+  }
+  .infoitem img {
+    height: 50px;
+    width: 100px;
+  }
+  .backgroundColor {
+    position: relative;
+  }
+  .backgroundColor .textInfo {
+    text-align: center;
+  }
+  .itemChi img.zalo {
+    position: absolute;
+    top: 3rem;
+    left: 55%;
+    transform: translate(-50%, 50%);
+  }
+  .itemChi img.face {
+    position: absolute;
+    top: 3rem;
+    left: 45%;
+    transform: translate(-50%, 50%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slick-slider.carousel.slick-initialized .slick-next:before,
+  .slick-slider.carousel.slick-initialized .slick-prev:before {
+    font-size: 25px;
+  }
+  .homeTool .container {
+    gap: 7px;
+    padding: 7px;
+  }
+  .homeTool .container button {
+    font-size: 12px;
+  }
+  .HomeMovie .MuiTypography-root.MuiTypography-h5.MuiTypography-gutterBottom {
+    font-size: 10px;
+    font-weight: bold;
+  }
+  .HomeMovie .MuiCardActions-root.MuiCardActions-spacing .MuiButton-label {
+    font-size: 10px;
+  }
+  .grid .textApp {
+    transform: translate(5%, -30%);
+  }
+  .grid .imgApp {
+    transform: translate(-40%, -30%);
+  }
+  .backgroundColor .textInfo {
+    text-align: center;
+  }
+  .infoitem {
+    grid-template-columns: auto;
+  }
+  .infoitem img {
+    height: 50px;
+    width: 100px;
+    transform: translate(250%, -20%);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .homeTool .container {
+    gap: 5px;
+    padding: 5px;
+  }
+  .homeTool .container button {
+    font-size: 10px;
+    padding: 6px 6px;
+  }
+  .grid .imgApp {
+    transform: translate(-50%, -30%);
+  }
+  .backgroundColor {
+    height: 500px;
+  }
+  .infoitem img {
+    transform: translate(230%, -20%);
+  }
+}
+/*# sourceMappingURL=home.css.map */

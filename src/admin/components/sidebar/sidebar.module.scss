@@ -1,0 +1,11 @@
+.sidebar__link {
+  color: rgba(0, 0, 0, 0.54);
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.sidebar__link__active {
+  color: black;
+}

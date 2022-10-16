@@ -1,0 +1,241 @@
+@import "../../asset/basicSCSS/responsive.scss";
+
+.cinema__section {
+  padding-top: 6.25rem;
+  .wrapper {
+    max-width: 940px;
+    margin: 0 auto;
+    .cinema__system,
+    .cinema__group,
+    .cinema__movie {
+      border: 1px solid #e2e2e2;
+      padding: 0;
+      height: 510px;
+    }
+    .cinema__group,
+    .cinema__movie {
+      border-left: none;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+  }
+}
+
+.cinema__system {
+  @include for-size(767px, down) {
+    height: 90px !important;
+  }
+
+  ul {
+    @include for-size(767px, down) {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+    }
+  }
+
+  li {
+    button {
+      padding: 1.25rem 15px 0;
+      height: 84px;
+      background-color: white !important;
+      border: none;
+      &:focus {
+        outline: none;
+      }
+      @include for-size(767px, down) {
+        min-width: 80px;
+      }
+      div {
+        border-bottom: 1px solid #e2e2e2;
+        padding-bottom: 1.25rem;
+        width: 100%;
+        height: 100%;
+        opacity: 0.35;
+        @include for-size(767px, down) {
+          border: none;
+        }
+        img {
+          pointer-events: none;
+          max-width: 100%;
+          height: auto;
+          @include for-size(767px, down) {
+            height: 100%;
+          }
+        }
+      }
+
+      &:hover div,
+      &:global(.active) div {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.cinema__group {
+  @include for-size(767px, down) {
+    max-height: 300px;
+    height: auto !important;
+    margin: 1.25rem 0 !important;
+  }
+  a {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    padding: 84px 0 0;
+    background-color: white !important;
+    .details {
+      position: absolute;
+      top: 1.25rem;
+      left: 15px;
+      bottom: 0;
+      right: 15px;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid #e2e2e2;
+      display: flex;
+      opacity: 0.35;
+      pointer-events: none;
+    }
+    &:hover .details,
+    &:global(.active) .details {
+      opacity: 1;
+    }
+  }
+}
+
+.details {
+  .cinema__image {
+    width: 43.02px;
+    .image {
+      width: 100%;
+    }
+  }
+  .describe {
+    width: calc(100% - 43.02px);
+    padding-left: 0.625rem;
+    font-size: 0.75rem;
+    .name,
+    .address,
+    .moreInfo {
+      margin-bottom: 0;
+      width: 100%;
+      color: #949494;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .name {
+      color: #8bc541;
+    }
+    .moreInfo {
+      font-style: italic;
+      color: red;
+    }
+  }
+}
+
+.cinema__movie {
+  max-height: 600px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0rem 15px !important;
+  @include for-size(767px, down) {
+    max-height: 300px;
+    height: auto !important;
+  }
+  .movie__details {
+    padding: 1.25rem 0;
+    height: 200px;
+    overflow: hidden;
+    border-bottom: 1px solid #e2e2e2;
+    .movie__info {
+      height: 64px;
+      overflow: hidden;
+      .image {
+        img {
+          width: 60px;
+          margin-right: 15px;
+        }
+      }
+      .info {
+        width: 100%;
+        padding-top: 5px;
+        .rated {
+          background-color: green;
+          color: #fff;
+          border-radius: 4px;
+          padding: 2px 5px;
+          margin-right: 5px;
+          font-size: 12px;
+          min-width: 33px;
+          text-align: center;
+          display: inline-block;
+        }
+        .title {
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 0;
+          line-height: 22px;
+          display: inline-block;
+        }
+        .subInfo {
+          margin-bottom: 0;
+          font-size: 14px;
+          color: #9b9b9b;
+        }
+      }
+    }
+  }
+}
+
+.movie__showtime {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  flex-flow: column wrap;
+  height: 116px;
+  align-content: flex-start;
+  a {
+    width: 20%;
+    min-width: 90px;
+    height: 40px;
+    margin: 10px 10px 0 0;
+    text-decoration: none;
+    color: #9b9b9b;
+    background-color: #fbfbfb;
+    border-radius: 4px;
+    display: block;
+    font-size: 14px;
+    border: 1px solid #9b9b9b;
+    text-align: center;
+    cursor: pointer;
+    .date {
+      font-size: 12px;
+      line-height: 12px;
+      color: #108f3e;
+      transition: all 0.3s;
+    }
+    .time {
+      line-height: 14px;
+      display: block;
+      transition: 0.2s all;
+    }
+    &:hover .time {
+      color: red;
+    }
+  }
+}
+
+:global(.custom__swal) {
+  button {
+    font-weight: unset;
+    font-size: 18px;
+  }
+  :global(.swal-footer) {
+    display: flex;
+    justify-content: center;
+  }
+}

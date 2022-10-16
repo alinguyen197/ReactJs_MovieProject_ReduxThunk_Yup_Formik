@@ -1,0 +1,26 @@
+@import "../sign-in/sign-in.module.scss";
+
+.signUp__content {
+  @extend .signIn__content;
+  max-width: 720px !important;
+  .content__body {
+    .form__content {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0.4rem;
+      .formField {
+        width: calc(50% - 0.8rem);
+        margin: 0.4rem !important;
+        @include for-size(sm, down) {
+          width: 100%;
+        }
+      }
+      .w50 {
+        width: calc(50% - 0.8rem);
+      }
+      .w100 {
+        width: 100%;
+      }
+    }
+  }
+}

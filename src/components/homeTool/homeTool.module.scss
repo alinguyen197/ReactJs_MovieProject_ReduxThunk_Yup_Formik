@@ -1,0 +1,90 @@
+@import "../../asset/basicSCSS/responsive.scss";
+
+.home__tool {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  max-width: 58.75rem;
+  width: 100%;
+  height: 5rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #0000004d;
+  background-color: #fff;
+  z-index: 10;
+  display: flex;
+  @include for-size(992px, down) {
+    display: none;
+  }
+  .tool__movie,
+  .tool__cinema,
+  .tool__date,
+  .tool__showtime,
+  .tool__booking {
+    position: relative;
+    width: calc(70% / 4);
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      height: 50%;
+      transform: translateY(-50%);
+      border-right: 1px solid rgba(238, 238, 238, 0.88);
+    }
+  }
+  .tool__movie {
+    width: 30%;
+  }
+  .tool__booking {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      border-radius: 4px;
+      font-size: 0.875rem;
+      padding: 0.625rem 1.5rem;
+    }
+  }
+}
+
+.tool__dropdown {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  padding: 0 35px 0 20px;
+  transform: translateY(-50%);
+  font-size: 0.875rem;
+  border: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  &:after {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    border-top: 0.3em solid #9b9b9b !important;
+    transform: translateY(-50%);
+  }
+}
+
+.tool__menu {
+  border-radius: 4px !important;
+  min-width: 160px !important;
+  font-size: 0.875rem !important;
+  box-shadow: 0 6px 12px #0000002e;
+  max-height: 300px !important;
+  overflow-y: auto;
+  .menu__item {
+    padding: 3px 20px;
+    cursor: pointer;
+    color: #333;
+    transition: 0.2s all;
+    white-space: nowrap;
+    &:hover {
+      background-color: #60c5ef;
+      color: #fff;
+    }
+  }
+}

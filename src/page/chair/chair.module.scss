@@ -1,0 +1,261 @@
+@import "../../asset/basicSCSS/responsive.scss";
+
+.booking__section {
+  padding-top: 3.75rem;
+  animation: fade 2s ease;
+  .booking__wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    .booking__content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .main {
+        border-left: 1px solid #e2e2e2;
+        margin-bottom: 1.25rem;
+      }
+      .sub {
+        padding: 30px 1.25rem 0;
+        border-right: 1px solid #e2e2e2;
+        height: auto;
+        overflow: hidden;
+        box-shadow: -5px 0 10px #e2e2e2;
+      }
+    }
+  }
+}
+
+.bottom {
+  width: 100%;
+  overflow-x: auto;
+  .cinema__layout {
+    .screen {
+      width: 90%;
+      min-width: 818px;
+      perspective: 100px;
+      margin: 30px auto;
+      background: black;
+      color: white;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 500;
+      position: relative;
+      &::before {
+        position: absolute;
+        letter-spacing: 2px;
+        background: transparent;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.5rem;
+        color: #fa5238;
+        z-index: 1;
+        content: "Màn hình";
+      }
+      &::after {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%) rotateX(10deg);
+        content: "";
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(to top, transparent, #e2e2e2);
+        display: block;
+      }
+    }
+    .chair__list,
+    .note {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      min-width: 818px;
+      max-width: 818px;
+      width: 80%;
+      margin: 50px auto;
+      padding: 0 1.25rem;
+      position: relative;
+      .center {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+      }
+      .chair {
+        width: 38px;
+        height: 25px;
+        background: #696969;
+        border: 2px solid #696969;
+        margin: 2px;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.2s all;
+        user-select: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p {
+          font-size: 1rem;
+          line-height: 1rem;
+          margin: 0;
+        }
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+      .left,
+      .right {
+        > div {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          width: 90%;
+          margin: 0 auto;
+        }
+      }
+      .vip {
+        background: #d4af37;
+        border: 2px solid #d4af37;
+      }
+      .booked {
+        background: #e2e2e2;
+        pointer-events: none;
+        border: none;
+      }
+      .selected {
+        border: 2px solid crimson;
+        background: #e2e2e2;
+        color: crimson;
+      }
+    }
+  }
+}
+
+.note {
+  > div {
+    display: flex;
+    align-items: center;
+    margin-right: 1.25rem;
+    pointer-events: none;
+    span {
+      margin-left: 2px;
+      font-size: 12px;
+    }
+  }
+}
+
+.sub {
+  .sub__info,
+  .selectedChair,
+  .total__money {
+    // display: flex;
+    border-bottom: 1px solid #e2e2e2;
+    padding-bottom: 1.25rem;
+    img {
+      width: 100%;
+      border-radius: 4px;
+    }
+    .info {
+      p {
+        color: #303030;
+        font-size: 14px;
+        margin: 0;
+        // color: #949494;
+        user-select: none;
+      }
+      .title {
+        // color: #000;
+        font-size: 18px;
+      }
+      .cinema {
+        text-transform: uppercase;
+      }
+    }
+  }
+  .selectedChair {
+    max-height: 290px;
+    overflow-y: auto;
+  }
+  .selectedChair,
+  .total__money {
+    padding-top: 1.25rem;
+    .label {
+      font-size: 16px;
+      font-style: italic;
+      color: red;
+    }
+    div.label {
+      font-size: 12px;
+      height: 25px;
+      font-style: normal;
+    }
+    .total {
+      text-align: end;
+      color: green;
+    }
+    .chair {
+      width: 38px;
+      height: 25px;
+      background: #696969;
+      border: 2px solid #696969;
+      margin: 2px;
+      color: white;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.2s all;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        font-size: 1rem;
+        line-height: 1rem;
+        margin: 0;
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .vip {
+      background: #d4af37;
+      border: 2px solid #d4af37;
+    }
+  }
+}
+
+.total__money {
+  .label {
+    font-size: 20px !important;
+  }
+  .total {
+    font-size: 20px !important;
+  }
+}
+
+.booking {
+  padding: 1.25rem 0;
+  .btn__book {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    background: #fa5238;
+    border: none;
+    color: white;
+    transition: 0.2s all;
+    &:hover,
+    &:disabled {
+      opacity: 0.8;
+    }
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

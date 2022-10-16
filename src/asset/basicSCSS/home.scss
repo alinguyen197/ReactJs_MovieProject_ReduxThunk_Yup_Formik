@@ -1,0 +1,480 @@
+html,
+body {
+  overflow-x: hidden;
+}
+@mixin partnerNewBlock($display, $gap, $flex-wrap, $grid-template-columns) {
+  display: $display;
+  gap: $gap;
+  flex-wrap: $flex-wrap;
+  grid-template-columns: $grid-template-columns;
+}
+@mixin partnerHomeApp($width, $height, $position) {
+  width: $width;
+  height: $height;
+  position: $position;
+}
+@mixin Next-Pre($right, $left) {
+  right: $right;
+  left: $left;
+  height: 100px;
+  width: 100px;
+  z-index: 1;
+}
+@mixin partnerFooter($width, $height) {
+  height: $height;
+  width: $width;
+}
+@mixin partnerDisplay($display, $grid-template-columns) {
+  display: $display;
+  grid-template-columns: $grid-template-columns;
+}
+@mixin partnerWidth1200($size, $weight) {
+  font: {
+    size: $size;
+    weight: $weight;
+  }
+}
+@mixin partnerWidth992($position, $top, $left, $transform) {
+  position: $position;
+  top: $top;
+  left: $left;
+  transform: $transform;
+}
+///header
+.header {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 15px #0000004d;
+}
+
+////Carousel
+$sociacl: banTayDietQuy, trangTi, latMat;
+@each $item in $sociacl {
+  .#{$item} {
+    background-image: url("../asset/image/#{$item}.png");
+    height: 800px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+  }
+}
+.round img {
+  height: 70px;
+  width: 70px;
+  opacity: 2;
+  transform: translate(1050%, -550%);
+}
+
+.slick-arrow.slick-next {
+  @include Next-Pre(0, 93%);
+}
+.slick-arrow.slick-prev {
+  @include Next-Pre(5%, 0);
+}
+.slick-slider.carousel.slick-initialized {
+  .slick-next:before,
+  .slick-prev:before {
+    font-size: 100px;
+  }
+}
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+//////HomeTool
+.positionHomeTool{
+  position: absolute;
+  transform: translate(20%,-130%)
+}
+.homeTool {
+  .container {
+    @include partnerDisplay(grid, auto auto auto auto auto);
+    gap: 70px;
+    top: 50%;
+    justify-content: center;
+    z-index: 1;
+    border: 5px solid #837c7c33;
+    padding: 25px;
+    border-radius: 2%;
+    box-shadow: 5px;
+    background-color: white;
+
+    button {
+      color: black;
+      font-size: 25px;
+    }
+  }
+}
+
+//////HomeMovie
+.HomeMovie {
+  padding-top: 10%;
+  .slick-arrow.slick-prev {
+    @include Next-Pre(0, -9%);
+  }
+  .slick-arrow.slick-next {
+    @include Next-Pre(0, 102%);
+  }
+  .slick-slider.slick-initialized .slick-next:before,
+  .slick-slider.slick-initialized .slick-prev:before {
+    font-size: 100px;
+    color: #a69f9f6e;
+  }
+}
+
+//// tableBlock
+.tableBlock.MuiTableBody-root {
+  @include partnerDisplay(grid, 100px 600px auto);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 500px;
+  border: 1px solid #7a7c833b;
+}
+.table {
+  border: 1px solid #7a7c833b;
+}
+@for $index from 0 through 5 {
+  .forImage-#{$index} {
+    background-image: url("../asset/image/bhd-#{$index}.png");
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+    margin-right: 1rem;
+  }
+}
+.handleCumRap {
+  margin: 1rem;
+}
+.MuiTableCell-root.MuiTableCell-body {
+  .row {
+    img {
+      margin: 0 10px 10px 10px;
+    }
+    h5 {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 10px;
+    }
+  }
+}
+
+//////newBlock
+.aboutGrid1 {
+  @include partnerNewBlock(grid, 5px, wrap-reverse, auto auto);
+}
+.aboutGrid2 {
+  @include partnerNewBlock(grid, 5px, wrap-reverse, auto auto auto);
+}
+.MuiCardMedia-img {
+  height: 300px;
+}
+.MuiTabs-flexContainer {
+  justify-content: center;
+}
+.MuiTabPanel-root {
+  .MuiGrid-container {
+    flex-wrap: nowrap;
+  }
+}
+.MuiGrid-root.MuiGrid-grid-lg-1 {
+  margin-right: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.imageChild {
+  @extend .MuiGrid-root.MuiGrid-grid-lg-1;
+  @include partnerFooter(120px, 120px);
+}
+
+/////homeApp
+
+.backgroundImage {
+  @include partnerHomeApp(100%, 800px, relative);
+  background-image: url(../asset/image/backapp.jpg);
+  opacity: 1;
+}
+.textApp {
+  color: white;
+  font-size: large;
+  padding-top: 50px;
+  h1,
+  h4,
+  p {
+    margin: 5px;
+    padding-bottom: 5px;
+  }
+}
+.grid {
+  @include partnerDisplay(grid, auto auto);
+  gap: 150px;
+  justify-items: center;
+  position: absolute;
+  top: 100px;
+}
+.imgApp {
+  // background-image: url(../asset/img/mobile.png);
+  @include partnerHomeApp(300px, 600px, absolute);
+  border: 5px solid #dfc8c847;
+  border-radius: 10%;
+  overflow: hidden;
+}
+.cardApp .slick-slider.slick-initialized .slick-arrow.slick-prev:before {
+  display: none;
+}
+
+////footer
+
+.backgroundColor {
+  @include partnerFooter(100%, 400px);
+  background-color: #080707f0;
+  color: #817b7b;
+}
+.const {
+  @include partnerDisplay(grid, auto auto auto auto auto);
+}
+.item {
+  @extend .const;
+  gap: 100px;
+  padding-top: 30px;
+}
+.itemChild {
+  @extend .const;
+  gap: 2px;
+  img {
+    @include partnerFooter(30px, 30px);
+    padding: 2px;
+  }
+}
+.itemChi img {
+  @include partnerFooter(30px, 30px);
+  padding: 2px;
+}
+.infoitem {
+  @include partnerDisplay(grid, auto auto auto);
+  padding-top: 10px;
+  gap: 10px;
+  img {
+    @include partnerFooter(150px, 70px);
+  }
+}
+
+/////reponsive
+
+@media screen and (max-width: 1200px) {
+  //carousel
+  .slick-slider.carousel.slick-initialized {
+    .slick-next:before {
+      font-size: 75px;
+      margin-left: -2rem;
+    }
+    .slick-prev:before {
+      font-size: 75px;
+      margin: 2rem;
+    }
+  }
+  //homeTool
+  .homeTool {
+    .container {
+      padding: 1rem;
+    }
+    .container button {
+      font-size: 20px;
+    }
+  }
+  ///homeMovie
+  .HomeMovie {
+    .slick-arrow.slick-prev:before,
+    .slick-arrow.slick-next:before {
+      display: none;
+    }
+    .MuiTypography-root.MuiTypography-h5.MuiTypography-gutterBottom,
+    .aboutGrid2 h5 {
+      @include partnerWidth1200(20px, bold);
+    }
+  }
+  //tableBlock
+  .tableBlock.MuiTableBody-root {
+    grid-template-columns: 100px 300px auto;
+  }
+  //newBlock
+  .aboutGrid1 {
+    h3 {
+      @include partnerWidth1200(20px, bold);
+    }
+  }
+  .aboutGrid2 {
+    grid-template-columns: auto auto 300px;
+    h3 {
+      @include partnerWidth1200(20px, bold);
+    }
+  }
+  //homeApp
+  .backgroundImage {
+    height: 1000px;
+  }
+  .grid {
+    grid-template-columns: auto;
+    .textApp {
+      transform: translate(50%, -30%);
+    }
+    .imgApp {
+      transform: translate(50%, -35%);
+    }
+  }
+
+  //footer
+  .backgroundColor {
+    h3,
+    h5 {
+      @include partnerWidth1200(12px, bold);
+      margin: 0.5rem;
+    }
+    .textInfo {
+      @include partnerWidth1200(0.8rem, bold);
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  //carousel
+  .slick-slider.carousel.slick-initialized {
+    .slick-next:before,
+    .slick-prev:before {
+      font-size: 50px;
+    }
+  }
+  //homeTool
+  .homeTool {
+    .container {
+      gap: 30px;
+      padding: 10px;
+    }
+    .container button {
+      font-size: 15px;
+    }
+  }
+  .aboutGrid1,
+  .aboutGrid2 {
+    grid-template-columns: auto;
+  }
+
+  //homeApp
+  .grid {
+    .textApp,
+    .imgApp {
+      transform: translate(20%, -30%);
+    }
+  }
+  //footer
+  .hideText {
+    display: none;
+  }
+  .item {
+    justify-content: center;
+    grid-template-columns: auto;
+    height: 100px;
+    .oneLine {
+      display: flex;
+      white-space: nowrap;
+    }
+  }
+  .infoitem img {
+    @include partnerFooter(100px, 50px);
+  }
+  .backgroundColor {
+    position: relative;
+    .textInfo {
+      text-align: center;
+    }
+  }
+  .itemChi {
+    img.zalo {
+      @include partnerWidth992(absolute, 3rem, 55%, translate(-50%, 50%));
+    }
+    img.face {
+      @include partnerWidth992(absolute, 3rem, 45%, translate(-50%, 50%));
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  //carousel
+  .slick-slider.carousel.slick-initialized {
+    .slick-next:before,
+    .slick-prev:before {
+      font-size: 25px;
+    }
+  }
+  //homeTool
+  .homeTool {
+    .container {
+      gap: 7px;
+      padding: 7px;
+    }
+    .container button {
+      font-size: 12px;
+    }
+  }
+  //homemovie
+  .HomeMovie {
+    .MuiTypography-root.MuiTypography-h5.MuiTypography-gutterBottom {
+      @include partnerWidth1200(10px, bold);
+    }
+    .MuiCardActions-root.MuiCardActions-spacing .MuiButton-label {
+      font-size: 10px;
+    }
+  }
+  //homeApp
+
+  .grid {
+    .textApp {
+      transform: translate(5%, -30%);
+    }
+    .imgApp {
+      transform: translate(-40%, -30%);
+    }
+  }
+  //footer
+
+  .backgroundColor .textInfo {
+    text-align: center;
+  }
+  .infoitem {
+    grid-template-columns: auto;
+    img {
+      @include partnerFooter(100px, 50px);
+      transform: translate(250%, -20%);
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  //homeTool
+  .homeTool {
+    .container {
+      gap: 5px;
+      padding: 5px;
+    }
+    .container button {
+      font-size: 10px;
+      padding: 6px 6px;
+    }
+  }
+  //homeApp
+  .grid .imgApp {
+    transform: translate(-50%, -30%);
+  }
+  //footer
+  .backgroundColor {
+    height: 500px;
+  }
+  .infoitem img {
+    transform: translate(230%, -20%);
+  }
+}

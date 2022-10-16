@@ -1,0 +1,207 @@
+@import "../../asset/basicSCSS/responsive.scss";
+
+.header {
+  .header__navbar {
+    background-color: #fffffff2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 0 15px #0000004d;
+    z-index: 100;
+    .navbar__left {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+    }
+    .navbar__center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include for-size(md, down) {
+        display: none;
+      }
+    }
+    .navbar__right {
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      transform: translateY(-50%);
+      @include for-size(md, down) {
+        display: none;
+      }
+    }
+    .sidebar__menu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      pointer-events: none;
+      transition: 0.5s all;
+      z-index: 10;
+    }
+    > .active {
+      background-color: rgba(0, 0, 0, 0.8);
+      pointer-events: inherit;
+    }
+    .mobile__menu {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 1.25rem;
+      @include for-size(769px, up) {
+        display: none;
+      }
+      img {
+        width: 1.5rem;
+      }
+    }
+  }
+}
+
+.navbar__center {
+  .navbar__menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.875rem;
+    .menu__item {
+      a {
+        text-decoration: none;
+        text-align: center;
+        margin: 0 0.625rem;
+        padding-bottom: 3px;
+        color: #000;
+        cursor: pointer;
+        transition: 0.2s all;
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          width: 0%;
+          height: 1px;
+          bottom: 0;
+          left: 0;
+          background: #fb4226;
+          transition: 0.2s all;
+        }
+        &:hover {
+          color: #fb4226;
+        }
+        &:hover:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.navbar__right {
+  .user__id {
+    display: flex;
+    align-items: center;
+    height: 120px;
+    text-decoration: none;
+    color: #9b9b9b;
+    font-size: 0.875rem;
+    cursor: pointer;
+    img {
+      width: 1.875rem;
+      margin-right: 5px;
+      border-radius: 25px;
+    }
+    .user__menu {
+      position: absolute;
+      z-index: 1;
+      bottom: 10px;
+      right: 0;
+      a {
+        border-radius: 5px;
+        background-color: #959595;
+        display: block;
+        padding: 0.3rem 1.5rem;
+        text-decoration: none;
+        color: white;
+        &:hover {
+          background-color: #888;
+        }
+      }
+    }
+  }
+}
+
+.sidebar__menu {
+  .sidebar__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    transform: translateX(100%);
+    height: 100%;
+    background-color: white;
+    transition: 0.5s all;
+    overflow-y: scroll;
+    .content__top {
+      position: relative;
+      padding: 1.25rem;
+      .user__info {
+        display: flex;
+        align-items: center;
+        img {
+          width: 2.25rem;
+          margin: 0 0.3rem;
+          border-radius: 50%;
+        }
+        span {
+          margin-left: 0.3rem;
+          font-size: 1.125rem;
+        }
+      }
+      .button__close {
+        position: absolute;
+        top: 50%;
+        right: 1.25rem;
+        width: 1rem;
+        transform: translateY(-50%);
+      }
+    }
+
+    .content__middle {
+      .item__link {
+        display: block;
+        text-decoration: none;
+        color: black;
+        padding: 1.25rem;
+        font-size: 1.125rem;
+        cursor: pointer;
+        transition: 0.2s all;
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          width: 0%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background: #fb4226;
+          transition: 0.2s all;
+        }
+        &:hover {
+          color: #fb4226;
+        }
+        &:hover:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  > .active {
+    transform: translateX(0%);
+  }
+}
